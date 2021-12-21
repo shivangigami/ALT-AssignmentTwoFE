@@ -107,6 +107,8 @@ td:hover
 {
     background-color:cadetblue;
 }
+
+
 /* ----- For mobile -----*/
 @media screen  and (min-width:400px){
 
