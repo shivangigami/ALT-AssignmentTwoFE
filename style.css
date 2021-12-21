@@ -1,0 +1,185 @@
+body{
+    background-color:lightgray;
+}
+
+ h1
+ {
+     color:sienna;
+     font-family: sans-serif;
+     text-align: center;
+ }
+
+ p 
+ {
+     text-align: center;
+     padding-top: 60px;
+     
+ }
+
+ p a
+ {
+    text-decoration: none;
+    color:teal;
+ }
+
+ p a:hover
+ {
+     font-size: 18px;
+ }
+.container
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.login
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #53ac85;
+     box-shadow:20px 20px 400px 10px gray inset;
+     padding: 20px;
+}
+
+input[type=submit]
+{
+    background-color:#ab5e54;
+    text-decoration: none;
+}
+
+input[type=submit]:hover
+{
+    color: #fff;
+    cursor: pointer;
+    background-color:#977668 ;
+}
+.form
+{
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 10px 20px 60px 10px gray;
+}
+input
+{
+    border-radius: 30px;
+    width: 400px;
+    height: 50px;
+    display: block;
+    border: 0;
+    outline: none;
+    box-sizing: border-box;
+    padding: 12px 20px;
+    margin-bottom: 30px;
+    background-color: lightgray;
+    
+    
+}
+
+table , th , td
+{
+    border: 1px solid white;
+    border-collapse: collapse;
+}
+
+table
+{
+   margin-right: auto;
+   margin-left: auto;
+   height:600px;
+   text-align: center;
+}
+
+th
+{
+    background-color: brown;
+}
+ td {
+    background-color: burlywood;
+    
+}
+
+
+td:hover
+{
+    background-color:cadetblue;
+}
+/* ----- For mobile -----*/
+@media screen  and (min-width:400px){
+
+    input 
+    {
+        width: 280px;
+        height: 30px;
+        text-align:center;
+        padding: 8px;
+        
+    }
+    h1 
+    {
+        font-size: 20px;
+        text-align: center;
+    }
+    table 
+{
+   width: 40%;
+   text-align: center;
+   
+}
+    .container
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+p a{
+    font-size:12px
+}
+
+p a:hover
+ {
+     font-size: 13px;
+ }
+
+    .login{
+        display: flex;
+        flex-direction:column;
+        justify-content: center;
+        align-items: center;
+    
+    }
+}
+
+/* ----- For desktop -----*/
+@media screen  and (min-width:798px){
+
+    input 
+    {
+        width: 350px;
+        
+    }
+    .container{
+        height: 100vh;
+    }
+    h1 
+    {
+        font-size: 40px;
+    }
+
+    .login
+    {
+        margin-right:80px
+    }
+}
+
+
+
+
+
+
+
+
