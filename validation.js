@@ -22,28 +22,37 @@ function registerForm(){
     function validateLogin(event){
     event.preventDefault();
     let {username , password}= inputForm();
+console.log(event)
+    console.log(username)
 
-    if (username=="" && password=="") {
-        //alert("Enter something")
-        document.getElementById('error1').innerHTML="**Enter username**"
-        document.getElementById('error2').innerHTML="**Enter Password**"
-    }
-
-    else if (username=="") {
+     if (username=="") {
         //alert("Enter username")
+        console.log("enter")
         document.getElementById('error1').innerHTML="**Enter username**"
     }
 
-    else if (password=="") {
+     if (password=="") {
        // alert("Enter password")
        document.getElementById('error2').innerHTML="**Enter Password**"
     }
 
-    if (username==='aricalotIntern' && password==='TEST@123') {
+    if (username=='aricalotIntern' && password=='TEST@123') {
         window.location.href="/Registration_page.html"
-          
+          username="";
+          password="";
+          document.getElementById('error1').innerHTML=""
+          document.getElementById('error2').innerHTML=""
 }
+ else if (username!=="" && username!=='aricalotIntern') {
+    username=""
+    document.getElementById('error1').innerHTML="Incorrect Username"
 }
+
+ else if (password!=="" && password!=='TEST@123') {
+    password=""
+    document.getElementById('error2').innerHTML="Incorrect Password"
+}}
+
 
 
 
@@ -56,38 +65,67 @@ function validateRegister(event){
     if (email=="") {
         //alert("Enter username")
         document.getElementById('error').innerHTML="**Enter email**"
-    }
+    } 
+    if (email!=="") {
+        
+        document.getElementById('error').innerHTML=""
     function checkEmail() {
         var validationEmail = /\S+@\S+\.\S+/;
         if (email.match(validationEmail)) {
             return true
         } else {
           document.getElementById("error_email").innerHTML = "**Email is incorrect**";
+          return false
         }
       }
-      checkEmail();
-
+    }
+      //checkEmail();
+    function checkUsername(){
      if (name=="") {
         //alert("Enter username")
         document.getElementById('error3').innerHTML="**Enter username**"
     }
+    else {
+        return true
+    }
+}
 
      if (pass=="") {
        // alert("Enter password")
        document.getElementById('error4').innerHTML="**Enter Password**"
     }
+    if (pass!=="") {
+        document.getElementById('error4').innerHTML=""
+   
     function checkPassword() {
         var validationCharacters =
           /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{8,15}$/;
         if (pass.match(validationCharacters)) {
+            return true
         } else {
           document.getElementById(
             "error_password"
           ).innerHTML = "**Password must contain  one number,one lower case, one upper case,one special and at least 8 characters.**"
         }
       }
-      checkPassword();
-      return false;
+    }
+      //checkPassword();
+//return false;
+      var inputUsername= checkUsername();
+      var inputPassword= checkPassword();
+      var inputEmail = checkEmail();
+
+      if (inputUsername && inputPassword && inputEmail) {
+        window.location.href="/Login_Page.html"
+        name="";
+        pass="";
+        email="";
+        document.getElementById('error').innerHTML=""
+        document.getElementById('error3').innerHTML=""
+        document.getElementById('error4').innerHTML=""
+
+      }
+      
     
 }
 
@@ -125,7 +163,7 @@ function passwordVisibility(){
 
 
 
-if (document.getElementById('login-btn')) {
+if (document.getElementById('login_btn')) {
 document.getElementById('login_btn').addEventListener("click" , validateLogin);
 }
 
