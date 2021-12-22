@@ -7,6 +7,7 @@
     <title>Registration Page</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" href="logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
     <div class="container">
@@ -14,14 +15,27 @@
             <img src="./logo.png" alt="logo" width="100px" height="100px">
             <h1>Register Here</h1>
             <form class="form" action="">
-                <input type="email" id="name" placeholder="Email" required>
-            <input type="text" id="name" placeholder="UserName" required>
-                <input type="password" id="password" placeholder="Password" required>
-                <input type="submit" id="login_btn" value="Register" action="./Registration_page.html" />
+                <input type="email" id="email" placeholder="Email">
+                <span id="error" style="color:red"></span>
+                <span id="error_email" style="color:red"></span>
+
+            <input type="text" id="fname" placeholder="UserName" >
+            <span id="error3" style="color:red"></span>
+
+            <div class="pass-box">
+                <input type="password" id="pw" placeholder="Password">
+                <i class="fa fa-eye-slash" id="eye" aria-hidden="true"></i>
+                <span id="error4" style="color:red"></span>
+                <span id="error_password" style="color:red"></span>
+            </div>
+
+                <input type="submit" id="submit_btn" value="Register" action="./Registration_page.html" />
             
             </form>
             <p> <a href="./Login_page.html" target="_blank">Login</a></p>
         </div>
     </div>
+
+    <script src="validation.js"></script>
 </body>
 </html>

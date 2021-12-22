@@ -108,6 +108,16 @@ td:hover
     background-color:cadetblue;
 }
 
+.pass-box{
+    position: relative;
+}
+
+.fa {
+    position: absolute;
+    right: 10px;
+    margin-top: -53px;
+    cursor: pointer;
+}
 
 /* ----- For mobile -----*/
 @media screen  and (min-width:400px){

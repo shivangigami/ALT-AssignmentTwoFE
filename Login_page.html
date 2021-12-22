@@ -7,16 +7,23 @@
     <title>Login Page</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" href="logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
     <div class="container">
     <div class="login">
         <img src="./logo.png" alt="logo" width="100px" height="100px">
         <h1>LOGIN PAGE</h1>
-        <form class="form"  name=user_form>
+        <form class="form" >
             <input type="text" id="name" placeholder="UserName" >
+            <span id="error1" style="color:red"></span>
+
+            <div class="pass-box">
             <input type="password" id="password" placeholder="Password" >
-            <i class="bi bi-eye-slash" id="togglePassword"></i>
+            <i class="fa fa-eye-slash" id="eye" aria-hidden="true"></i>
+            <span id="error2" style="color:red"></span>
+            </div>
+
             <input type="submit" id="login_btn" value="Login"  />
         
         </form>
