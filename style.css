@@ -1,6 +1,6 @@
-body{
+/* body{
     background-color:lightgray;
-}
+} */
 
  h1
  {
@@ -78,36 +78,7 @@ input
     
 }
 
-table , th , td
-{
-    border: 1px solid white;
-    border-collapse: collapse;
-}
 
-table
-{
-   margin-right:100px;
-   margin-left: 100px;
-   height:600px;
-   text-align: center;
-}
-
-th
-{
-    background-color: brown;
-}
- td {
-    background-color: burlywood;
-    
-}
-
-
-
-
-.image-size {
-    width: 90px;
-    height: 120px;
-}
 .pass-box{
     position: relative;
 }
