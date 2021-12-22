@@ -22,7 +22,7 @@ body{
     color:teal;
  }
 
- p a:hover
+ .p a:hover
  {
      font-size: 18px;
  }
@@ -86,8 +86,8 @@ table , th , td
 
 table
 {
-   margin-right: auto;
-   margin-left: auto;
+   margin-right:100px;
+   margin-left: 100px;
    height:600px;
    text-align: center;
 }
@@ -102,14 +102,11 @@ th
 }
 
 
-td:hover
-{
-    background-color:cadetblue;
-}
+
 
 .image-size {
-    width: 70px;
-    height: 80px;
+    width: 90px;
+    height: 120px;
 }
 .pass-box{
     position: relative;
@@ -138,12 +135,7 @@ td:hover
         font-size: 20px;
         text-align: center;
     }
-    table 
-{
-   width: 40%;
-   text-align: center;
-   
-}
+    
     .container
 {
     display: flex;

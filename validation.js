@@ -37,7 +37,7 @@ console.log(event)
     }
 
     if (username=='aricalotIntern' && password=='TEST@123') {
-        window.location.href="/Registration_page.html"
+        window.location.href="/My_Product_list.html"
           username="";
           password="";
           document.getElementById('error1').innerHTML=""
