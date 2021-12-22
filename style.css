@@ -107,6 +107,10 @@ td:hover
     background-color:cadetblue;
 }
 
+.image-size {
+    width: 70px;
+    height: 80px;
+}
 .pass-box{
     position: relative;
 }
