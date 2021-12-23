@@ -7,13 +7,24 @@
     <title>My Product List</title>
     <link rel="stylesheet" href="product-style.css">
     <link rel="icon" type="image/png" href="logo.png">
+   
+
+
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 </head>
 <body>
 
     <h1>My Product List</h1>
 
-   
+    <!-- <input type="text" placeholder="Search.." name="search" id="mySearch" />
+    <button id="search-btn">Search</button> <br><br> -->
+
+    <select name="" id="selection" >
+        <option value="mensclothing">Men's Clothing</option>
+        <option value="jewelery">Jewelery</option>
+        <option value="electronics">Electronic</option>
+        <option value="womensclothing">Women's Clothing</option>
+    </select>
     <table class="table">
         <thead>
             <th>id</th>
@@ -25,9 +36,10 @@
         
         </thead>
         <tbody id="tablebody">
-
+            
         </tbody>
     </table>
+   
 
     <script src="dashboard.js"></script>
 </body>
