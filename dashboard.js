@@ -19,18 +19,26 @@ axios.get(url)
      
         //productList.push(user)
         //console.log(productList)
-        tableList +="<tr>";
-        tableList +="<td>"+user[i].id+"</td>"
-        tableList +="<td>"+user[i].title+"</td>"
-        tableList +="<td>"+user[i].price+"</td>"
-        tableList +="<td>"+user[i].description+"</td>"
-        tableList +="<td>"+user[i].category+"</td>"
-        tableList +="<td><img class='image-size' src="+user[i].image+"></td>"
+      //   tableList +="<tr>";
+      //   tableList +="<td>"+user[i].id+"</td>"
+      //   tableList +="<td>"+user[i].title+"</td>"
+      //   tableList +="<td>"+user[i].price+"</td>"
+      //  // tableList +="<td>"+user[i].description+"</td>"
+      //   tableList +="<td>"+user[i].category+"</td>"
+      //   tableList +=`<td><a href='http://127.0.0.1:5500/Product_detail.html?id=${user[i].id}'><img id='image-btn' class='image-size' src="${user[i].image}"></a></td>`
+      //  // tableList +="<td>"+user.ratings+"</td>"
+
+      tableList =`<div class="container col-md-3">
+        <a href='http://127.0.0.1:5500/Product_detail.html?id=${user[i].id}'>
+        <div><img id='image-btn' class='image-size' src="${user[i].image}"></div>
+        <h4 class="text">${user[i].title.length>17?`${user[i].title.substring(0,17)}`:user[i].title}</h4>
+        <h4 class="font">$${user[i].price}</h4>  </a>
+        </div>`
        // tableList +="<td>"+user.ratings+"</td>"
 
 //console.log(user)
     
-document.getElementById('tablebody').innerHTML = tableList;
+document.getElementById('box').innerHTML += tableList;
     }
   }
    
@@ -44,7 +52,7 @@ function getSelectValue(){
   //console.log(selectedValue);
   
   if (this.value=="jewelery") {
-    document.getElementById('tablebody').innerHTML =""
+    document.getElementById('box').innerHTML =""
     axios.get('https://fakestoreapi.com/products/category/jewelery')
     .then((response)=>{
       displayProductList(response.data)
@@ -52,7 +60,7 @@ function getSelectValue(){
   }
 
   if (this.value=="mensclothing") {
-    document.getElementById('tablebody').innerHTML =""
+    document.getElementById('box').innerHTML =""
     axios.get("https://fakestoreapi.com/products/category/men's clothing")
     .then((response)=>{
       displayProductList(response.data)
@@ -60,7 +68,7 @@ function getSelectValue(){
   }
 
   if (this.value=="electronics") {
-    document.getElementById('tablebody').innerHTML =""
+    document.getElementById('box').innerHTML =""
     axios.get("https://fakestoreapi.com/products/category/electronics")
     .then((response)=>{
       displayProductList(response.data)
@@ -68,7 +76,7 @@ function getSelectValue(){
   }
 
   if (this.value=="womensclothing") {
-    document.getElementById('tablebody').innerHTML =""
+    document.getElementById('box').innerHTML =""
     axios.get("https://fakestoreapi.com/products/category/women's clothing")
     .then((response)=>{
       displayProductList(response.data)
@@ -77,30 +85,12 @@ function getSelectValue(){
 }
 
 
-document.getElementById('selection').addEventListener("change" , getSelectValue)
-// document.getElementById("search-btn").addEventListener("click" , searchProductList)
-// function checkProductListExistOrNot (searchList){
-//   let searchResult=productList.filter(function(user){
-//     return (
-//       user.id===searchList ||
-//       user.title===searchList ||
-//       user.price=== searchList||
-//       user.description=== searchList ||
-//       user.category=== searchList
-//     )
-//   })
-//   return searchResult;
-// }
+// // function viewImageDescription(){
+// // alert("clicked")
+ 
+// // }
+// // document.getElementById('image-btn').addEventListener("click" , viewImageDescription)
 
-// function searchProductList(){
-//   const searchBar= document.getElementById("mySearch").value;
-//   const searchList= searchBar.toLowerCase();
-//   let searchResult =checkProductListExistOrNot(searchList);
-//   if (searchResult.length > 0) {
-//     document.getElementById('tablebody').innerHTML = "";
-//     displayProductList(searchList)
-//   } else {
-//     alert("No data found");
-//   }
-// }
+document.getElementById('selection').addEventListener("change" , getSelectValue)
+
 
