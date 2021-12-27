@@ -14,12 +14,6 @@ return {
 function validateInputProductData (event){
     event.preventDefault();
     let { newTitle , newPrice , newImage , newCategory , newDescription}= inputNewProductData();
-//     console.log("title" , newTitle);
-// console.log("newPrice" , newPrice);
-// console.log("description" , newDescription);
-// console.log("image" , newImage);
-// console.log("category" , newCategory)
- 
 
 if (newTitle=="") {
     document.getElementById('title-err').innerHTML="Enter Title"
@@ -51,7 +45,7 @@ axios.post('https://fakestoreapi.com/products' ,
 })
 .then(response =>  {
    if (response.status === 200) {
-       console.log("Data added")
+      
    }
    else {
        

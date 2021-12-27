@@ -22,17 +22,15 @@ function registerForm(){
     function validateLogin(event){
     event.preventDefault();
     let {username , password}= inputForm();
-console.log(event)
-    //console.log(username)
 
      if (username=="") {
-        //alert("Enter username")
+        
         console.log("enter")
         document.getElementById('error1').innerHTML="**Enter username**"
     }
 
      if (password=="") {
-       // alert("Enter password")
+       
        document.getElementById('error2').innerHTML="**Enter Password**"
     }
 
@@ -63,7 +61,7 @@ function validateRegister(event){
     let {name , pass, email}= registerForm();
     
     if (email=="") {
-        //alert("Enter username")
+        
         document.getElementById('error').innerHTML="**Enter email**"
     } 
     if (email!=="") {
@@ -79,10 +77,10 @@ function validateRegister(event){
         }
       }
     }
-      //checkEmail();
+     
     function checkUsername(){
      if (name=="") {
-        //alert("Enter username")
+        
         document.getElementById('error3').innerHTML="**Enter username**"
     }
     else {
@@ -91,7 +89,7 @@ function validateRegister(event){
 }
 
      if (pass=="") {
-       // alert("Enter password")
+      
        document.getElementById('error4').innerHTML="**Enter Password**"
     }
     if (pass!=="") {
@@ -110,7 +108,7 @@ function validateRegister(event){
       }
     }
       //checkPassword();
-//return false;
+
       var inputUsername= checkUsername();
       var inputPassword= checkPassword();
       var inputEmail = checkEmail();
@@ -130,8 +128,7 @@ function validateRegister(event){
 }
 
 function passwordVisibility(){
-    // let {username ,password}= inputForm();
-    // let {name , pass, email}= registerForm();
+    
     var password=document.getElementById('password')
     var pass=document.getElementById('pw')
     if (password) {

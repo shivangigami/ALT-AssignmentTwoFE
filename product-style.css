@@ -35,6 +35,7 @@ th
 .image-size {
     width: 200px;
     height: 220px;
+    
 }
 
 /* for search bar */
@@ -70,7 +71,7 @@ li {
     display: flex;
     align-items: center;
     flex-direction: row;
-    justify-content: center;
+    justify-content: left;
     
 } */
 
@@ -258,7 +259,7 @@ text-align: center;
     padding: 50px;
 }
 
-#description {
+#descriptions {
     margin-top: 40px;
     margin-left: 200px;
     margin-right: 200px;
@@ -266,3 +267,8 @@ text-align: center;
     
 }
 
+#categories {
+    margin-right: 200px;
+    margin-left: 200px;
+    
+}

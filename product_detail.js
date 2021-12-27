@@ -4,13 +4,11 @@ let similarHeader= document.getElementById('header')
 axios.get(`https://fakestoreapi.com/products/${productId}`)
 .then((response)=>{
     displayDescriptionOfList(response.data)
-     console.log(response)
+    
      if (response.data.category) {
         fetchSimilarCategoryData(response.data.category);
       }
      
-     //console.log(json)
-    
 });
 
 function displayDescriptionOfList(item){
@@ -27,7 +25,7 @@ function displayDescriptionOfList(item){
         </div>
          `
 
-         document.getElementById('description').innerHTML+=descriptionList;
+         document.getElementById('descriptions').innerHTML+=descriptionList;
 }
 
 
@@ -36,22 +34,22 @@ function fetchSimilarCategoryData(categoryName) {
       .get(`https://fakestoreapi.com/products/category/${categoryName}`)
       .then((response) => {
         similarCategoryData(response.data)
-        console.log("similar datas", response.data);
       });
    
   }
 
   function similarCategoryData (item){
     let similarCategory="";
-    
-    for (let i = 0; i < item.length; i++){
+    item.filter((data)=>data.id !=productId).map((productItem)=>{
+   
       similarHeader.style.display="block"
     similarCategory=`<div class="container col-md-3">
-    <a href='http://127.0.0.1:5500/Product_detail.html?id=${item[i].id}'>
-    <img id='image-btn' class='image-size' src="${item[i].image}">
-    <h4 class="text">${item[i].title.length>17?`${item[i].title.substring(0,17)}`:item[i].title}</h4>
-        <h4 class="font">$${item[i].price}</h4>  </a>
+    <a href='http://127.0.0.1:5500/Product_detail.html?id=${productItem.id}'>
+    <img id='image-btn' class='image-size' src="${productItem.image}">
+    <h4 class="text">${productItem.title.length>17?`${productItem.title.substring(0,17)}`:productItem.title}</h4>
+        <h4 class="font">$${productItem.price}</h4>  </a>
     <div>
     `
-    document.getElementById('categories').innerHTML+=similarCategory;
-  }}
+   return ( document.getElementById('categories').innerHTML+=similarCategory)
+  })
+  }
