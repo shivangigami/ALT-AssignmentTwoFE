@@ -175,7 +175,7 @@ text-align: center;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    margin-top: 40px;
+    margin-top: 30px;
 }
 
 .productContainer{
@@ -225,11 +225,13 @@ text-align: center;
 .newProduct-btn {
     width: 200px;
     height: 50px;
+    border: 0;
+    outline: none;
     border-radius: 10px;
     background-color: #ab5e54;
     text-align: center;
     font-size: 15px;
-    margin-left: 1300px;
+    margin-left: 1500px;
     
 }
 
@@ -242,7 +244,7 @@ text-align: center;
     margin-left: 400px;
     margin-right: 400px;
     
-    visibility: hidden;
+    display: none;
 }
 
 
@@ -286,4 +288,27 @@ text-align: center;
     background-color: lightgray;
     text-align: center;
     font-size: 15px;
+}
+
+.updateProduct-btn {
+    margin-top: 10px;
+    border: 0;
+    outline: none;
+    width: 200px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: #df7769;
+    text-align: center;
+    font-size: 20px;
+    margin-left: 1500px;
+    
+}
+ a {
+     text-decoration: none !important;
+ }
+
+.updateProduct-btn:hover {
+    width: 205px;
+    height: 55px;
+    color: wheat;
 }

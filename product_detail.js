@@ -1,5 +1,6 @@
 var productId= window.location.search.split("=")[window.location.search.split("=").length-1]
-let similarHeader= document.getElementById('header')
+let similarHeader= document.getElementById('header');
+// let updateButton = document.getElementById('update-btn');
 
 axios.get(`https://fakestoreapi.com/products/${productId}`)
 .then((response)=>{
@@ -13,7 +14,14 @@ axios.get(`https://fakestoreapi.com/products/${productId}`)
 
 function displayDescriptionOfList(item){
     let descriptionList="";
+    let updateList="";
+updateList=`<div>
+<a href="http://127.0.0.1:5500/New_product.html?id=${item.id}">
+<button id="update-btn" class="updateProduct-btn">Update Product</button></a> 
+</div>`
+    // updateButton.style.display="block"
     descriptionList=`<div class="grid-container">
+   
    <img class="imgBox" src="${item.image}">
     <div class="align"><h1 class="heading">${item.title}</h1>
         
@@ -26,6 +34,7 @@ function displayDescriptionOfList(item){
          `
 
          document.getElementById('descriptions').innerHTML+=descriptionList;
+         document.getElementById('updateData').innerHTML=updateList
 }
 
 
@@ -53,3 +62,5 @@ function fetchSimilarCategoryData(categoryName) {
    return ( document.getElementById('categories').innerHTML+=similarCategory)
   })
   }
+
+  
