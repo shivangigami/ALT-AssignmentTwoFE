@@ -14,7 +14,7 @@ return {
 function validateInputProductData (event){
     event.preventDefault();
     let { newTitle , newPrice , newImage , newCategory , newDescription}= inputNewProductData();
-
+console.log(newCategory)
 if (newTitle=="") {
     document.getElementById('title-err').innerHTML="Enter Title"
 }

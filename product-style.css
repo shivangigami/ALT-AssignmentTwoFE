@@ -272,3 +272,18 @@ text-align: center;
     margin-left: 200px;
     
 }
+#category {
+    width: 400px;
+    height: 50px;
+    border-radius: 8px;
+    background-color: lightgray;
+    display: block;
+    border: 0;
+    outline: none;
+    box-sizing: border-box;
+    padding: 12px 20px;
+    margin-bottom: 10px;
+    background-color: lightgray;
+    text-align: center;
+    font-size: 15px;
+}
