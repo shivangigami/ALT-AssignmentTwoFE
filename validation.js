@@ -23,7 +23,7 @@ function registerForm(){
     event.preventDefault();
     let {username , password}= inputForm();
 console.log(event)
-    console.log(username)
+    //console.log(username)
 
      if (username=="") {
         //alert("Enter username")

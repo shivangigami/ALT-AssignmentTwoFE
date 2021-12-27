@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="product-style.css">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="productBox">
+        <div class="productContainer">
+    <h1>Add New Product</h1>
+    <div class="form-popup"  id="myForm">
+    <form action="" class="addDetails">
+       <div> <input id="title" type="text" placeholder="Enter Product Title">
+        <span id="title-err" style="color: red;"></span> </div>
+        <div><input id="price" type="text" placeholder="Enter Price">
+        <span id="price-err" style="color: red;"></span></div>
+       <div> <input id="description" type="text" placeholder="Description About Product">
+        <span id="des-err" style="color: red;"></span></div>
+        <div><input id="images" type="text" placeholder="Images Required">
+        <span id="img-err" style="color: red;"></span></div>
+        <div><input id="category" type="text" placeholder="Category">
+        <span id="cate-err" style="color: red;"></span></div>
+        <button class="product-btn" id="btn">Add Product</button>
+        <!-- <select name=""  >
+            <option value="mensclothing">Men's Clothing</option>
+            <option value="jewelery">Jewelery</option>
+            <option value="electronics">Electronic</option>
+            <option value="womensclothing">Women's Clothing</option>
+        </select> -->
+<div class="success" id="show">
+    
+    <span class="message">Your Product Was Added Successfully</span>
+    
+</div>
+        
+    </form>
+</div>
+<script src="./New_Product.js"></script>
+</body>
+</html>
