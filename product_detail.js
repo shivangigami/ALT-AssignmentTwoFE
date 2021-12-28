@@ -17,7 +17,8 @@ function displayDescriptionOfList(item){
     let updateList="";
 updateList=`<div>
 <a href="http://127.0.0.1:5500/New_product.html?id=${item.id}">
-<button id="update-btn" class="updateProduct-btn">Update Product</button></a> 
+<button id="update-btn" class="updateProduct-btn">Update Product</button>
+</a> <button id="update-btn" class="updateProduct-btn" onclick="deleteProduct()">Delete Product</button>
 </div>`
     // updateButton.style.display="block"
     descriptionList=`<div class="grid-container">
@@ -37,7 +38,32 @@ updateList=`<div>
          document.getElementById('updateData').innerHTML=updateList
 }
 
+function deleteProduct (){
+  document.getElementById('delete').style.display="block";
+  document.getElementById('delete-btn').addEventListener("click" , itemDeleteSuccessfully);
+  document.getElementById('dont-delete').addEventListener("click" , itemNotDeleted)
+}
 
+
+function itemDeleteSuccessfully(){
+  axios
+    .delete(`https://fakestoreapi.com/products/${productId}`)
+    .then((response) => {
+      console.log("Data Deleted", response.data);
+
+      document.getElementById("delete").style.display = "none";
+      document.getElementById("deleteSuccess").style.display = "block";
+      document
+        .getElementById("confirm-Button")
+        .addEventListener("click", function () {
+          window.location.href = "./My_Product_list.html";
+        });
+      })
+}
+
+function itemNotDeleted(){
+  document.getElementById('delete').style.display="none"
+}
 function fetchSimilarCategoryData(categoryName) {
     axios
       .get(`https://fakestoreapi.com/products/category/${categoryName}`)

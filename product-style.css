@@ -312,3 +312,65 @@ text-align: center;
     height: 55px;
     color: wheat;
 }
+
+/* delete product */
+
+#delete {
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    text-align: center;
+    width: 500px;
+    margin-left: 500px;
+    display: none;
+    position: fixed;
+    background-color:white;
+}
+
+.deleteSuccess {
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    text-align: center;
+    width: 500px;
+    margin-left: 700px;
+    display: none;
+    position: fixed;
+    background-color: white;
+  }
+  .deleteSuccess button {
+    border-radius: 8px;
+    border: 0;
+    margin-bottom: 10px;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+    height: 30px;
+    width: 80px;
+    cursor: pointer;
+    letter-spacing: 2px;
+    background-color: goldenrod;
+  }
+  .deleteSuccess p {
+    margin-top: 10px;
+    font-size: 20px;
+  }
+
+ 
+
+  #dont-delete{
+      width: 70px;
+      height: 40px;
+      color: lightcoral;
+      border: 0;
+      margin-left: 20px;
+      border-radius: 6px;
+  }
+
+  #delete-btn {
+      border: 0;
+      width: 70px;
+      border-radius: 6px;
+      height: 40px;
+      background-color: lightcoral;
+      color: lightgray;
+      margin-right: 20px;
+  }
