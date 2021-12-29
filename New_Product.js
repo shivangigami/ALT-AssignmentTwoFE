@@ -5,7 +5,7 @@ function inputNewProductData(){
     
 var newTitle= document.getElementById('title').value;
 var newPrice= document.getElementById('price').value;
-var newDescription = document.getElementById('description').value;
+var newDescription = document.getElementById('description');
 var newImage= document.getElementById('images').value;
 var newCategory= document.getElementById('category').value;
 return {

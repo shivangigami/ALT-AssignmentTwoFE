@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Product List</title>
-    <link rel="stylesheet" href="product-style.css">
+    <link rel="stylesheet" href="./product-style.css">
     <link rel="icon" type="image/png" href="./logo.png">
     <!-- CSS only -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
@@ -16,17 +16,28 @@
 </head>
 <body>
 <div class="navBar">
-    
+    <img src="./bar.png" id="hamburger" class="hamburger" alt="">
     <div class="logo">
         <img src="./logo.png" >
     </div>
-    <div class="nav">
-        <a class="product-link" href="">Home</a>
-        <a href="" class="product-link">Contact</a>
-        <a href="" class="product-link">Membership</a>
-        <a class="product-link" href="New_product.html">Add New Product</a>
+    
+    <ul class="nav" id="product-nav">
+        <li class="product-list">
+            <a href="" class="product-link" >Home</a>
+        </li>
+        <li class="product-list">
+        <a href="" class="product-link" >Contact</a>
+    </li>
+    <li class="product-list">
+
+        <a href="" class="product-link" >Membership</a>
+    </li>
+    <li class="product-list">
+
+        <a class="product-link"  href="./New_product.html">Add New Product</a>
+    </li>
         
-    </div>
+    </ul>
     <!-- <h3 id="shop-header">Best Buy</h3> -->
     <select name="" id="selection" class="selection" >
         
@@ -38,7 +49,7 @@
     </select>
     <div class="icon">
         <img src="./cart-icon.png" >
-        <img src="./account-icon.png" alt="">
+       <a href="./Login_page.html"><img src="./account-icon.png" alt=""></a>
     </div>
 </div>
     <!-- <a href="New_product.html">
@@ -51,7 +62,7 @@
         </div>
     
 
-    <script src="dashboard.js"></script>
-    <!-- <script src="product_detail"></script> -->
+    <script src="./dashboard.js"></script>
+    
 </body>
 </html>

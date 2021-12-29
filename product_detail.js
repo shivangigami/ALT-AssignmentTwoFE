@@ -18,7 +18,7 @@ function displayDescriptionOfList(item){
 updateList=`<div>
 <a href="http://127.0.0.1:5500/New_product.html?id=${item.id}">
 <button id="update-btn" class="updateProduct-btn">Update Product</button>
-</a> <button id="update-btn" class="updateProduct-btn" onclick="deleteProduct()">Delete Product</button>
+</a> <button  class="updateProduct-btn" onclick="deleteProduct()">Delete Product</button>
 </div>`
     // updateButton.style.display="block"
     descriptionList=`<div class="grid-container">

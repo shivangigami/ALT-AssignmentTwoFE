@@ -1,5 +1,8 @@
 let productList=[];
-let url= "https://fakestoreapi.com/products"
+let url= "https://fakestoreapi.com/products";
+
+var logout= document.getElementById('logout');
+var login= document.getElementById('login')
 
 axios.get(url)
 .then((response)=>{
@@ -58,7 +61,30 @@ function getSelectValue(){
   }
 }
 
+function displayNavigationList(){
+ 
+ switch (document.getElementById('product-nav').style.display) {
+  case "":
+    document.getElementById('product-nav').style.display="block"
+    break;
+
+  case "none":
+  document.getElementById('product-nav').style.display="block"
+  break;
+
+ case "block":
+  document.getElementById('product-nav').style.display="none"
+  break;
+
+  default:
+    document.getElementById('product-nav').style.display="none"
+    break;
+}
+}
+
 
 document.getElementById('selection').addEventListener("change" , getSelectValue)
+
+document.getElementById('hamburger').addEventListener("click" , displayNavigationList)
 
 
