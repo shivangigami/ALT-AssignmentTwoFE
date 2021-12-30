@@ -90,7 +90,12 @@ input
     margin-top: -43px;
     cursor: pointer;
 }
-
+/* tablet view */
+@media screen  and (max-width:767px){
+    input {
+        width: 350px;
+    }
+}
 /* ----- For mobile -----*/
 @media screen  and (max-width:480px){
 
