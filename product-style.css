@@ -408,6 +408,235 @@ text-align: center;
 .hamburger {
     display: none;
 }
+
+@media screen  and (max-width:1700px){
+   
+
+    .product-link {
+        font-size: 20px;
+        margin: 25px;
+    }
+    .selection
+    {
+        margin-right: 30px;
+        margin-left: 20px;
+        width: 240px;
+    }
+    
+    .icon {
+        margin-right: 22px;
+        display: flex;
+        flex-direction:row;
+    }
+    
+    .icon img {
+        margin: 20px;
+    }
+    #box {
+        width: 1190px;
+    }
+    .container {
+    width: 280px !important;
+    padding: 10px;
+    }
+        
+    
+    /* product detail */
+    
+    .grid-container {
+        width: 1100px;
+        grid-gap:20px;
+    }
+    
+    .imgBox {
+        width: 400px;
+        height: 400px;
+        margin-left:20px;
+        padding: 20px;
+    }
+    
+    .heading {
+        text-align: center;
+        font-size: 38px;
+    }
+    
+    .detail {
+        text-align:center;
+    }
+    
+    .price {
+       text-align: center;
+    }
+    
+    .align {
+        width:500px;
+    }
+    
+    .cart-btn {
+        margin-left: 150px;
+        margin-right:150px;
+    }
+    
+     
+    #categories {
+        margin-right: 80px;
+        margin-left: 80px;
+    } 
+    
+    .updateProduct-btn {
+        width: 200px;
+        height: 50px;
+        margin-left: 900px;
+        
+    }
+    
+    .updateProduct-btn:hover {
+        width: 205px;
+        height: 55px;
+        color: wheat;
+    }
+    
+    .deleteSuccess {
+        width: 700px;
+        margin-left:40px;
+        margin-right: 40px;
+        border-radius:8px ;
+    }
+     /* new product */
+        
+     .message {
+         width: 600px;
+         margin-left: 300px;
+         text-align: center;
+     }
+     #button-click {
+        margin-left: 500px;
+        margin-right: 200px;
+     }
+    
+     .success {
+        margin-left:60px;
+        margin-right:60px;
+        right: 0;
+        left:0;
+    }
+    
+}
+
+@media screen  and (max-width:1200px){
+/* product homepage */
+    
+
+.product-link {
+    font-size: 20px;
+    margin: 25px;
+}
+.selection
+{
+    margin-right: 30px;
+    margin-left: 20px;
+    width: 240px;
+}
+
+.icon {
+    margin-right: 22px;
+    display: flex;
+    flex-direction:row;
+}
+
+.icon img {
+    margin: 20px;
+}
+#box {
+    width: 1190px;
+}
+.container {
+width: 280px !important;
+padding: 10px;
+}
+    
+
+/* product detail */
+
+.grid-container {
+    width: 1100px;
+    grid-gap:20px;
+}
+
+.imgBox {
+    width: 400px;
+    height: 400px;
+    margin-left:20px;
+    padding: 20px;
+}
+
+.heading {
+    text-align: center;
+    font-size: 38px;
+}
+
+.detail {
+    text-align:center;
+}
+
+.price {
+   text-align: center;
+}
+
+.align {
+    width:500px;
+}
+
+.cart-btn {
+    margin-left: 150px;
+    margin-right:150px;
+}
+
+ 
+#categories {
+    margin-right: 100px;
+    margin-left: 100px;
+} 
+
+.updateProduct-btn {
+    width: 200px;
+    height: 50px;
+    margin-left: 900px;
+    
+}
+
+.updateProduct-btn:hover {
+    width: 205px;
+    height: 55px;
+    color: wheat;
+}
+
+.deleteSuccess {
+    width: 700px;
+    margin-left:40px;
+    margin-right: 40px;
+    border-radius:8px ;
+}
+ /* new product */
+    
+ .message {
+     width: 600px;
+     margin-left: 300px;
+     text-align: center;
+ }
+ #button-click {
+    margin-left: 500px;
+    margin-right: 200px;
+ }
+
+ .success {
+    margin-left:60px;
+    margin-right:60px;
+    right: 0;
+    left:0;
+}
+
+}
 @media screen  and (max-width:1023px){
      /* product homepage */
     
