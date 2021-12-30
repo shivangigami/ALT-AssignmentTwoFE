@@ -408,7 +408,159 @@ text-align: center;
 .hamburger {
     display: none;
 }
+@media screen  and (max-width:1023px){
+     /* product homepage */
+    
+     .logo img {
+        margin-left: 20px;
+    }
+    .product-link {
+        font-size: 20px;
+        margin: 8px;
+    }
+    .selection
+    {
+        margin-right: 20px;
+        margin-left: 20px;
+        width: 220px;
+    }
   
+    .icon {
+        margin-right: 22px;
+        display: flex;
+        flex-direction:row;
+    }
+
+    .icon img {
+        margin: 15px;
+        width: 40px;
+        height: 40px;
+    }
+
+.container {
+    width: 300px !important;
+}
+
+/* product detail */
+.grid-container{
+    width: 980px;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto auto auto;
+    grid-gap: 10px;
+    padding: 0;
+    margin-left: 15px;
+    margin-right: 15px; 
+}
+
+.imgBox {
+    grid-column: 1;
+    grid-row: 1;
+    margin-left:200px;
+}
+
+.heading {
+    grid-column: 1;
+    grid-row: 2;
+    text-align:center;
+    font-size: 40px;
+}
+
+.detail {
+    grid-column: 1;
+    grid-row: 3 ;
+    text-align:center;
+    font-size: 25px;
+}
+
+.price {
+    grid-column: 1;
+    grid-row: 4;
+    font-size: 28px;
+    text-align: center;
+    color: seagreen;
+}
+
+.cart-btn {
+    grid-column: 1;
+    grid-row: 5;
+    width: 160px;
+    height: 50px;
+    margin-left: 410px;
+    margin-right: 410px;
+   
+    font-size: 25px;
+   
+}
+
+.align{
+    
+    width: 980px;
+}
+
+#categories {
+    margin-left: 10px;
+    margin-right: 10px;
+    
+}
+
+.updateProduct-btn{
+    margin-left: 800px;
+    width: 150px;
+    height: 40px;
+    font-size: 15px;
+}
+
+.updateProduct-btn:hover {
+    width: 155px;
+    height: 45px;
+}
+
+
+    /*       pop up      */
+    .popUp-msg {
+        width:1020px;
+    }
+   
+    #delete {
+        width: 800px;
+        margin-left:40px;
+        margin-right: 40px;
+    }
+
+    .deleteSuccess {
+        width: 700px;
+        margin-left:30px;
+        margin-right: 40px;
+        border-radius:8px ;
+    }
+
+      /* new product */
+    
+      .productBox{
+        margin-top: 80px;
+         justify-content: center;
+     }
+     .message {
+         margin-left: 250px;
+         text-align: center;
+     }
+     #button-click {
+        
+        margin-left: 400px;
+        margin-right: 200px;
+     }
+
+     .success {
+        
+        margin-left:60px;
+        margin-right:60px;
+        right: 0;
+        left:0;
+        border-radius:8px;
+        
+    }
+}
 
 /* Tablet view */
 
