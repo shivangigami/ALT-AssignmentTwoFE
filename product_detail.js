@@ -1,3 +1,4 @@
+var loading= document.getElementById("loading")
 var productId= window.location.search.split("=")[window.location.search.split("=").length-1]
 let similarHeader= document.getElementById('header');
 // let updateButton = document.getElementById('update-btn');
@@ -8,18 +9,14 @@ axios.get(`https://fakestoreapi.com/products/${productId}`)
     
      if (response.data.category) {
         fetchSimilarCategoryData(response.data.category);
+        loading.style.display="none"
       }
      
 });
 
 function displayDescriptionOfList(item){
     let descriptionList="";
-    let updateList="";
-updateList=`<div>
-<a href="http://127.0.0.1:5500/New_product.html?id=${item.id}">
-<button id="update-btn" class="updateProduct-btn">Update Product</button>
-</a> <button  class="updateProduct-btn" onclick="deleteProduct()">Delete Product</button>
-</div>`
+    
     // updateButton.style.display="block"
     descriptionList=`<div class="grid-container">
    
@@ -28,8 +25,11 @@ updateList=`<div>
         
         <p class="detail">${item.description}</p>
         <p class="price">$${item.price}</p> 
-        <button class="cart-btn">Cart</button></div>
-        
+        <button class="updateProduct-btn">Add to Cart</button>
+<a href="http://127.0.0.1:5500/New_product.html?id=${item.id}">
+<button id="update-btn" class="updateProduct-btn">Update Product</button>
+</a> <button  class="updateProduct-btn" onclick="deleteProduct()">Delete Product</button></div>
+
         
         </div>
          `
@@ -42,10 +42,12 @@ function deleteProduct (){
   document.getElementById('delete').style.display="block";
   document.getElementById('delete-btn').addEventListener("click" , itemDeleteSuccessfully);
   document.getElementById('dont-delete').addEventListener("click" , itemNotDeleted)
+
 }
 
 
 function itemDeleteSuccessfully(){
+  document.getElementById('delete-msg').innerHTML="Deleting ......."
   axios
     .delete(`https://fakestoreapi.com/products/${productId}`)
     .then((response) => {

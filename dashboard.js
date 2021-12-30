@@ -1,3 +1,5 @@
+var loading= document.getElementById("loading")
+
 let productList=[];
 let url= "https://fakestoreapi.com/products";
 
@@ -7,7 +9,7 @@ var login= document.getElementById('login')
 axios.get(url)
 .then((response)=>{
     displayProductList(response.data)
-    
+    loading.style.display="none";
 });
     
     function displayProductList(user){
